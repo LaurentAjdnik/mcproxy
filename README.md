@@ -6,7 +6,7 @@ This is very experimental and possibly totally useless 😁. Join [this discussi
 
 This project is related to Anthropic's Model Context Protocol (MCP, see [docs](https://modelcontextprotocol.io) and [spec](https://spec.modelcontextprotocol.io/)).
 
-MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features in the workflow between them (a few examples are given below).
+MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features in the workflow between them (a few [examples](#features) are given below).
 
 # Global architecture
 
@@ -113,12 +113,31 @@ An MCProxy can log all messages going back and forth between an MCP Client and a
 
 ## Capabilities aggregation
 
-An MCProxy can aggregate capabilities from different servers into a meaningful package.
+An MCProxy can aggregate capabilities from different MCP Servers into a meaningful package.
 
 ## Capabilities blocking
 
-An MCProxy may expose only a subset of the capabilities provided by the server(s) it connects to.
+An MCProxy may expose only a subset of the capabilities provided by the MCP Server(s) it connects to.
 
 ## Capabilities disambiguation
 
-With the fast-growing number of servers, me might end up with some name collisions. An MCProxy may rename capabilities, so that they appear unique to a client, and handle routing to the appropriate server.
+With the fast-growing number of MCP Servers, me might end up with some name collisions. An MCProxy may rename capabilities, so that they appear unique to an MCP Client, and handle routing to the appropriate MCP Server.
+
+## On-the-fly internationalization (i18n)
+
+The current version of the MCP Specification does not provide i18n (see [my issue about this](https://github.com/modelcontextprotocol/specification/issues/86)).
+
+An MCProxy could translate some fields on the fly, using a translation API or an LLM.
+
+# Configuration
+
+In order to connect to MCP Servers, MCProxy uses the same configuration file format as defined in the [Quickstart section](https://modelcontextprotocol.io/quickstart#installation) of the MCP docs.
+
+Some more internal configuration is available for the MCProxy itself.
+
+Finally, each module provides some configuration directives. For instance:
+- The preferred language, for an i18n module
+- The capabilities not to expose, for a capabilities-blocking module
+- ...
+ 
+
