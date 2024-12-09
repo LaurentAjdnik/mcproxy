@@ -211,9 +211,11 @@ They are called in the order in which they are declared in the configuration fil
 
 ## Protocol
 
-The protocol between MCProxy and a module is strongly inspired by the MCP specification but not exactly the same.
+The protocol between MCProxy and an external module is strongly inspired by the MCP specification.
 
-Mostly, they return a message of the same type they were provided with, or null if no update was done.
+But the workflow is quite different: Mostly, the responses are messages of the same type that the one sent.
 
-For instance, a Request message could be sent to a module and an updated Requested message could be returned.
+For instance:
+- a `GetPromptRequest` message could be sent to a module and an updated `GetPromptRequest` message would be returned
+- a `ListToolsResult` message could be sent to a module and an updated `ListToolsResult` message would be returned
 
