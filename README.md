@@ -28,7 +28,7 @@ flowchart LR
     server1 <--> client2
 ```
 
-A MCProxy can connect to multiple servers:
+An MCProxy can connect to multiple servers:
 
 ```mermaid
 flowchart LR
@@ -48,7 +48,7 @@ flowchart LR
     server1 <--> client3
 ```
 
-A MCP Host may connect to different MCProxies with very different configurations:
+An MCP Host may connect to different MCProxies with very different configurations:
 
 ```mermaid
 flowchart LR
