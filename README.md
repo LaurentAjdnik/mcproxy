@@ -207,6 +207,8 @@ They can be hosted locally or remotely as a service.
 
 They declare their "capabilities", that it the types of MCP messages they are interested in.
 
+They are called in the order in which they are declared in the configuration file.
+
 ## Protocol
 
 The protocol between MCProxy and a module is strongly inspired by the MCP specification but not exactly the same.
