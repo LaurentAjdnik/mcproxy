@@ -1,6 +1,6 @@
 # Foreword
 
-Discussion
+This is very experimental and possibly totally useless 😁. Join [this discussion](https://github.com/LaurentAjdnik/mcproxy/discussions/2) for feedback, that will be greatly appreciated.
 
 # Overview
 
@@ -11,6 +11,7 @@ MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features
 # Global architecture
 
 From a Client's perspective, MCProxy behaves like a Server.
+
 From a Server's perspective, MCProxy behaves like a Client.
 
 In its simplest form:
