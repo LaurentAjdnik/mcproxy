@@ -182,3 +182,21 @@ Configuration:
 - Preferred language
 - Connection parameters to the translation tool
  
+# External modules
+
+They provide extra-features on top of the basic features provided by MCProxy itself.
+
+## Hosting
+
+They can be hosted locally or remotely as a service.
+
+## Capabilities
+
+They declare their "capabilities", that it the types of MCP messages they are interested in.
+
+## Protocol
+
+The protocol between MCProxy and a module is strongly inspired by the MCP specification but not exactly the same.
+
+For instance, a Request message could be sent to a module and an updated Requested message could be returned.
+
