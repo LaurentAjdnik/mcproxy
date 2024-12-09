@@ -104,6 +104,19 @@ flowchart LR
 
 # Internal architecture
 
+The basic components are:
+- The **Server manager**, that handles the communication with the MCP Client (Requests but also Responses/Errors/Notifications)
+- The **Clients manager**, that maintains a list of connected MCP Servers and handles the communication with them (Requests but also Responses/Errors/Notifications)
+
+The **Internal features** component provides a list of basic features that are always available.
+
+The **Modules manager** maintains a list of external modules, which provide extra-features, and interacts with them.
+
+The core component is the **Dispatcher**, that:
+- Forwards messages between the MCP Client and the MCP Servers, back and forth
+- Applies the internal features, when applicable
+- Calls the external modules, when applicable
+
 ```mermaid
 flowchart LR
     subgraph MCProxy
