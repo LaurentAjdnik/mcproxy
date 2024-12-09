@@ -159,7 +159,7 @@ Note: In MCP Hosts, like Claude Dekstop, the configuration file would point towa
 
 # Features
 
-Here are a few examples of features an MCProxy could implement.
+Here are a few examples of features an MCProxy could implement, internally of through external modules.
 
 ## Logging
 
@@ -186,6 +186,10 @@ With the fast-growing number of MCP Servers, me might end up with some name coll
 
 Configuration:
 - List of Server / Identifier => New identifier
+
+## Content update
+
+Textual content can be filtered or enriched while going through MCProxy.
 
 ## On-the-fly internationalization (i18n)
 
