@@ -6,7 +6,11 @@ This is very experimental and possibly totally useless 😁. Join [this discussi
 
 This project is related to Anthropic's Model Context Protocol (MCP, see [docs](https://modelcontextprotocol.io) and [spec](https://spec.modelcontextprotocol.io/)).
 
-MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features in the workflow between them (a few [examples](#features) are given below).
+MCProxy is a proxy between MCP Clients and MCP Servers, allowing new features in the workflow between them (a few [examples](#features) are given below).
+
+MCProxy provides the building blocks for such a proxy architecture, along with some basic features (TBD: List of basic features).
+
+New features can be added, depending on the user's needs, with plug-in modules (TBD: Plug-in mechanism).
 
 # Global architecture
 
