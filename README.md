@@ -102,6 +102,9 @@ flowchart LR
 
 # Internal architecture
 
+# Identifiers
+
+By default, MCProxy exposes all the resources/prompts/tools of the MCP Servers it connects to, using the same identifiers. These identifiers can be renamed (see Features below).
 
 # Features
 
