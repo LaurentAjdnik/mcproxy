@@ -119,8 +119,8 @@ flowchart LR
             clientB[MCP Client B]
         end
     end
-    moduleA[External module]
-    moduleB[External module]
+    moduleA[External module A]
+    moduleB[External module B]
 
     servermanager <--> dispatcher
     dispatcher <--> clientsmanager
