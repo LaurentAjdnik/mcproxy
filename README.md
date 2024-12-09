@@ -211,5 +211,7 @@ They declare their "capabilities", that it the types of MCP messages they are in
 
 The protocol between MCProxy and a module is strongly inspired by the MCP specification but not exactly the same.
 
+Mostly, they return a message of the same type they were provided with, or null if no update was done.
+
 For instance, a Request message could be sent to a module and an updated Requested message could be returned.
 
