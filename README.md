@@ -157,7 +157,7 @@ Some more internal configuration is available for the MCProxy itself.
 
 Finally, each module provides some configuration directives. Examples are given below.
 
-Note: In MCP Hosts, like Claude Dekstop, the configuration file would point towads the MCProxy, not the different servers behind it.
+Note: In MCP Hosts, like Claude Dekstop, the configuration file would point towards the MCProxy, not the different servers behind it.
 
 # Features
 
