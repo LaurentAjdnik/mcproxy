@@ -2,6 +2,8 @@
 
 This is very experimental and possibly totally useless 😁. Join [this discussion](https://github.com/LaurentAjdnik/mcproxy/discussions/2) for feedback, that will be greatly appreciated.
 
+Note: This might contradict [this](https://spec.modelcontextprotocol.io/specification/architecture/#design-principles): "Cross-server interactions are controlled by the host". Or not...
+
 # Overview
 
 This project is related to Anthropic's Model Context Protocol (MCP, see [docs](https://modelcontextprotocol.io) and [spec](https://spec.modelcontextprotocol.io/)).
