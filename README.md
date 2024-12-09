@@ -209,6 +209,8 @@ They provide extra-features on top of the basic features provided by MCProxy its
 
 They are independent projects that plug into an MCProxy.
 
+A list of such modules could be maintained, just like lists of MCP Clients/Servers are currently being built (see for instance [here](https://github.com/modelcontextprotocol/servers), [here](https://github.com/punkpeye/awesome-mcp-servers) or [here](https://github.com/wong2/awesome-mcp-servers)).
+
 ## Hosting
 
 They can be hosted locally or remotely as a service.
