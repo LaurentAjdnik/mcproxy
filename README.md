@@ -10,8 +10,8 @@ MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features
 
 # Global architecture
 
-From a Client's perspective, MCProxy behaves like a server.
-From a Server's perspective, MCProxy behaves like a client.
+From a Client's perspective, MCProxy behaves like a Server.
+From a Server's perspective, MCProxy behaves like a Client.
 
 In its simplest form:
 
@@ -48,6 +48,34 @@ flowchart LR
     server1 <--> client2
     server1 <--> client3
 ```
+
+A MCP Host may connect to different MCProxies with very different configurations:
+
+```mermaid
+flowchart LR
+    subgraph "Host"
+        clientH1[MCP Client]
+        clientH2[MCP Client]
+    end
+    subgraph "MCProxy A"
+        serverPA[MCP Server]
+        clientPA[MCP Client]
+    end
+    serverA[MCP Server A]
+    subgraph "MCProxy B"
+        serverPB[MCP Server]
+        clientPB[MCP Client]
+    end
+    serverB[MCP Server B]
+
+    clientH1 <--MCP--> serverPA
+    clientH2 <--MCP--> serverPB
+    clientPA <--MCP--> serverA
+    clientPB <--MCP--> serverB
+    serverPA <--> clientPA
+    serverPB <--> clientPB
+```
+
 
 If of any use, MCProxies can be chained:
 
