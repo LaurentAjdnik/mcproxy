@@ -199,6 +199,8 @@ Configuration:
 
 They provide extra-features on top of the basic features provided by MCProxy itself.
 
+They are independent projects that plug into an MCProxy.
+
 ## Hosting
 
 They can be hosted locally or remotely as a service.
@@ -219,3 +221,4 @@ For instance:
 - a `GetPromptRequest` message could be sent to a module and an updated `GetPromptRequest` message would be returned
 - a `ListToolsResult` message could be sent to a module and an updated `ListToolsResult` message would be returned
 
+(TBD: Specification of such a protocol)
