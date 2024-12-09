@@ -104,6 +104,32 @@ flowchart LR
 
 # Internal architecture
 
+```mermaid
+flowchart LR
+    subgraph MCProxy
+        subgraph servermanager[Server manager]
+            server[MCP Server]
+        end
+        dispatcher[Dispatcher]
+        internalfeatures[Internal features]
+        modulesmanager[Modules manager]
+        subgraph clientsmanager[Clients manager]
+            direction TB
+            clientA[MCP Client A]
+            clientB[MCP Client B]
+        end
+    end
+    moduleA[External module]
+    moduleB[External module]
+
+    servermanager <--> dispatcher
+    dispatcher <--> clientsmanager
+    dispatcher <--> internalfeatures
+    dispatcher <--> modulesmanager
+    modulesmanager <--> moduleA
+    modulesmanager <--> moduleB
+```
+
 # Identifiers
 
 By default, MCProxy exposes all the resources/prompts/tools of the MCP Servers it connects to, using the same identifiers. These identifiers can be renamed (see Features below).
