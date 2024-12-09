@@ -98,3 +98,26 @@ flowchart LR
     server1 <--> client2
     server2 <--> client3
 ```
+
+# Internal architecture
+
+
+# Features
+
+Here are a few examples of features an MCProxy could implement.
+
+## Logging
+
+An MCProxy can log all messages going back and forth between an MCP Client and an MCP Server.
+
+## Capabilities aggregation
+
+An MCProxy can aggregate capabilities from different servers into a meaningful package.
+
+## Capabilities blocking
+
+An MCProxy may expose only a subset of the capabilities provided by the server(s) it connects to.
+
+## Capabilities disambiguation
+
+With the fast-growing number of servers, me might end up with some name collisions. An MCProxy may rename capabilities, so that they appear unique to a client, and handle routing to the appropriate server.
