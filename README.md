@@ -134,6 +134,14 @@ flowchart LR
 
 By default, MCProxy exposes all the resources/prompts/tools of the MCP Servers it connects to, using the same identifiers. These identifiers can be renamed (see Features below).
 
+# Configuration
+
+In order to connect to MCP Servers, MCProxy uses the same configuration file format as defined in the [Quickstart section](https://modelcontextprotocol.io/quickstart#installation) of the MCP docs.
+
+Some more internal configuration is available for the MCProxy itself.
+
+Finally, each module provides some configuration directives. Examples are given below.
+
 # Features
 
 Here are a few examples of features an MCProxy could implement.
@@ -141,6 +149,10 @@ Here are a few examples of features an MCProxy could implement.
 ## Logging
 
 An MCProxy can log all messages going back and forth between an MCP Client and an MCP Server.
+
+Configuration:
+- What to log
+- Where to log
 
 ## Capabilities aggregation
 
@@ -150,9 +162,15 @@ An MCProxy can aggregate capabilities from different MCP Servers into a meaningf
 
 An MCProxy may expose only a subset of the capabilities provided by the MCP Server(s) it connects to.
 
+Configuration:
+- Capabilities to be blocked
+ 
 ## Capabilities disambiguation
 
 With the fast-growing number of MCP Servers, me might end up with some name collisions. An MCProxy may rename capabilities, so that they appear unique to an MCP Client, and handle routing to the appropriate MCP Server.
+
+Configuration:
+- List of Server / Identifier => New identifier
 
 ## On-the-fly internationalization (i18n)
 
@@ -160,15 +178,7 @@ The current version of the MCP Specification does not provide i18n (see [my issu
 
 An MCProxy could translate some fields on the fly, using a translation API or an LLM.
 
-# Configuration
-
-In order to connect to MCP Servers, MCProxy uses the same configuration file format as defined in the [Quickstart section](https://modelcontextprotocol.io/quickstart#installation) of the MCP docs.
-
-Some more internal configuration is available for the MCProxy itself.
-
-Finally, each module provides some configuration directives. For instance:
-- The preferred language, for an i18n module
-- The capabilities not to expose, for a capabilities-blocking module
-- ...
+Configuration:
+- Preferred language
+- Connection parameters to the translation tool
  
-
