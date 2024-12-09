@@ -10,9 +10,7 @@ MCProxy is a proxy between MCP Clients and MCP Servers, introducing new features
 
 # Global architecture
 
-From a Client's perspective, MCProxy behaves like a Server.
-
-From a Server's perspective, MCProxy behaves like a Client.
+From an MCP Client's perspective, MCProxy behaves like an MCP Server. From an MCP Server's perspective, MCProxy behaves like an MCP Client.
 
 In its simplest form:
 
